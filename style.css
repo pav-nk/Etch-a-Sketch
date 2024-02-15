@@ -1,0 +1,248 @@
+:root {
+    --color1: #0b0c10;
+    --color2: #1f2833;
+    --color3: #c5c6c7;
+    --color4: #66fcf1;
+    --color5: #45a29e;
+    --color6: #ffffff;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(./fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: PermanentMarker;
+    src: url(./fonts/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+    font-family: RobotoBold;
+    src: url(./fonts/Roboto-Bold.ttf);
+}
+
+html,
+body {
+    font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background: rgb(31, 40, 51);
+    background: radial-gradient(circle, rgba(31, 40, 51, 1) 0%, rgba(11, 12, 16, 1) 100%);
+    color: var(--color3);
+}
+
+button {
+    display: block;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 960px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.header {
+    padding: 16px 0;
+}
+
+.header .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-family: PermanentMarker;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: var(--color4);
+    margin: 0;
+}
+
+.link {
+    color: var(--color4);
+    cursor: pointer;
+}
+
+.link--github::before {
+    content: '';
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    background: url('./icons/github.svg') 100% / cover no-repeat;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.nav__item {
+    display: flex;
+    align-items: center;
+    font-family: RobotoBold;
+    color: var(--color3);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    gap: 10px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 25px;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    background: var(--color6);
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.button {
+    text-transform: uppercase;
+    font-family: RobotoBold;
+    color: var(--color3);
+    padding: 8px 16px;
+    background: transparent;
+    border: 2px solid var(--color4);
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: var(--color1);
+    background: var(--color4);
+}
+
+.footer {
+    font-family: RobotoBold;
+    padding: 16px 0;
+    color: var(--color5);
+}
+
+.footer span,
+.footer .link {
+    line-height: 1.5rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__content {
+    padding: 20px;
+    background-color: var(--color1);
+    border: 5px solid var(--color2);
+    border-radius: 5px;
+}
+
+.modal__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.close-button {
+    width: 24px;
+    height: 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent url('./icons/close-button.svg') 100% / cover no-repeat;
+}

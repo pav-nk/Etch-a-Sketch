@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./icons/pen.svg">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Etch-a-Sketch</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="inner">
+                <h1 class="title">Etch-a-Sketch</h1>
+                <div class="menu">
+                    <ul class="nav">
+                        <li class="nav__item">
+                            <button id="clear-btn" class="button">clear</button>
+                        </li>
+                        <li class="nav__item">
+                            <input type="color" id="color-picker" name="color-picker" value="#0b0c10" />
+                            <label for="color-picker">select color</label>
+                        </li>
+                        <li class="nav__item">
+                            <button id="toggle-grid-btn" class="button">toggle grid</button>
+                        </li>
+                        <li class="nav__item">
+                            <button id="change-grid-size-btn" class="button">change size grid</button>
+                        </li>
+                        <li class="nav__item">
+                            <button id="active-rgb-mode-btn" class="button">active RGB mode</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="wrapper">
+            <div class="field">
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <span>Copyright © 2024</span><a class="link link--github" href="https://github.com/pav-nk">pav_nk</a>
+        </div>
+    </footer>
+    <div class="modal visually-hidden">
+        <div class="modal__content">
+            <div class="modal__header">
+                <label for="grid-size-select">Change your grid size:</label>
+                <input type="range" id="grid-size-select" name="grid-size-select" min="10" max="50" value="10"
+                    step="10" />
+            </div>
+            <div class="modal__footer">
+                <p>Value: <span class="select-value">10</span></p>
+                <button class="close-button"></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
